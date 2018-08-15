@@ -1,0 +1,40 @@
+{
+  "name": "composer-tool",
+  "jest": {
+    "reporters": [
+      "default",
+      [
+        "./node_modules/jest-html-reporter",
+        {
+          "pageTitle": "Composer Tool",
+          "outputPath": "./reporter/index.html",
+          "customScriptPath": "./custom.js",
+          "styleOverridePath": "./reporter/custom.css",
+          "theme": "darkTheme",
+          "includeFailureMsg": false
+        }
+      ]
+    ]
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-watch": "^5.0.1",
+    "rimraf": "^2.6.2",
+    "xmldom": "^0.1.27"
+  },
+  "scripts": {
+    "test": "jest ./tests/_all.test.js",
+    "concat": "gulp concat",
+    "watch": "gulp concat && gulp watch"
+  },
+  "devDependencies": {
+    "gulp-filter": "^5.1.0",
+    "gulp-fn": "^0.0.3",
+    "jest": "^23.5.0",
+    "jest-html-reporter": "^2.4.2"
+  }
+}

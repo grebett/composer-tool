@@ -1,0 +1,7 @@
+*.xml
+*.musicxml
+node_modules
+reporter/
+yarn-error.log
+.DS_Store
+tests/_all.test.js
